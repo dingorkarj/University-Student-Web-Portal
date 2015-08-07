@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>UHCL Eservices</title>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
+
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+
+        <link href="css/mycss.css" rel="stylesheet" type="text/css"/>
+        <script src="js/myscript.js" type="text/javascript"></script>
+    </h:head>
+    <h:body style="height: 100vh">
+        <div id="loader" style="visibility: hidden"></div>
+        <div class="se-pre-con"></div>
+        <center>
+            <h:form id="form" style="width: 90%; margin-top: 5vh;">
+
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="student_home.xhtml"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li role="presentation"><h:commandLink action="#{index.registerPage()}" onclick="wait();"><span class="glyphicon glyphicon-saved"/> Register Course</h:commandLink></li>
+                    <li role="presentation"><h:commandLink action="student_classSchedule.xhtml"><span class="glyphicon glyphicon-calendar"/> Class Schedule</h:commandLink></li>
+                    <li role="presentation"><h:commandLink action="student_dropcourse.xhtml"><span class="glyphicon glyphicon-ban-circle"/> Drop Course</h:commandLink></li>
+                    <li role="presentation"><h:commandLink action="#{index.bill()}"><span class="glyphicon glyphicon-credit-card"/> View Bill</h:commandLink></li>
+                    <li role="presentation" class="pull-right"><h:commandLink action="#{index.logout()}"><span class="glyphicon glyphicon-off"></span> Logout</h:commandLink></li>
+                    <li role="presentation" class="pull-right"><a><span class="glyphicon glyphicon-user"/> Hello, #{index.getaStudent().s_name}</a></li>
+                </ul>
+
+                <div style="width: 90%">
+                    <h2>Hello #{index.getaStudent().s_name}, Welcome to your eServices Account  </h2>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sit amet metus ornare, volutpat ipsum ut, viverra dolor. Cras eleifend luctus mauris quis convallis. Sed quis nisi lorem. Nullam eleifend a leo vitae ullamcorper. Pellentesque id dapibus nibh. Integer sed ante vitae quam viverra pellentesque. Sed sed arcu enim. Donec vulputate rhoncus tincidunt. Duis et ante maximus, sollicitudin sem tincidunt, varius quam. Nunc accumsan odio id ipsum fringilla facilisis. Phasellus elementum at nulla vitae tempor. Aenean sem metus, feugiat congue tellus eget, cursus luctus ipsum. Vivamus iaculis, dui non tempor elementum, neque nulla elementum magna, ut egestas ante risus sit amet nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    </p>
+                    <h3>Attention!</h3>
+                    <p>Fusce auctor, neque ac sodales congue, turpis nisl maximus velit, eu sagittis lorem eros ut tellus. Suspendisse potenti. Nulla facilisi. Aenean ac enim vestibulum, lobortis tellus at, condimentum eros. Ut ac risus tristique, consectetur urna et, sodales turpis. Donec purus nibh, condimentum quis iaculis vitae, pulvinar in nunc. Proin eget suscipit arcu. Ut at magna sit amet nibh ullamcorper congue sed ut purus.
+                    </p>
+                    <h3>Message:</h3>
+                    <p>Donec cursus fringilla nisl, vitae elementum sapien varius nec. In ac turpis at ligula congue porttitor. Ut ipsum sapien, euismod sit amet vestibulum eu, sollicitudin bibendum leo. Quisque at mollis enim. Nullam nec enim sit amet risus dignissim ullamcorper. Donec sagittis auctor justo, eget iaculis dolor tempus quis. Vivamus condimentum, diam id laoreet dignissim, quam risus semper est, eu dignissim quam nisi vel tortor. Phasellus vestibulum arcu feugiat, eleifend massa ac, iaculis dui.
+                    </p>
+                    <h3>Announcement:</h3>
+                    <p>Proin elementum in ante sed dapibus. In commodo vestibulum erat, sit amet cursus est tincidunt et. Cras facilisis enim sit amet pulvinar lobortis. Nullam vel posuere lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam lorem eu dolor bibendum scelerisque. Sed porttitor scelerisque aliquet. Vivamus maximus facilisis nibh non sodales. Duis tincidunt dolor vel lectus semper accumsan. Curabitur ac mauris mattis, luctus risus at, auctor sem. Morbi semper, nunc eget vulputate gravida, augue magna semper nibh, auctor rutrum neque tellus quis elit.
+                    </p>
+                </div>
+
+            </h:form>
+        </center>
+    </h:body>
+</html>
+

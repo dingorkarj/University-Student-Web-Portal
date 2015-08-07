@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>UHCL E-Services</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
+
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+
+        <link href="css/mycss.css" rel="stylesheet" type="text/css"/>
+        <script src="js/myscript.js" type="text/javascript"></script>
+    </h:head>
+    <h:body>
+        <center>
+
+            <h:form  style="width: 30%; margin-top: 8vh;">
+
+                <div class="form-group">
+                    <img src="images/logo.png" style="width: 70%" alt=""/><br/><br/>
+                    <label>User ID</label>
+                    <h:inputText class="form-control" style="text-align: center" value="#{index.idString}"><f:passThroughAttribute value="Type/UserID" name="placeholder"/></h:inputText>
+                    (Use "student/" or "faculty/" before your ID)
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <h:inputSecret class="form-control" style="text-align: center" value="#{index.psw}"><f:passThroughAttribute value="Password" name="placeholder"/></h:inputSecret>
+                </div>
+                <h:commandButton value="Login" action="#{index.login()}" class="btn btn-primary"></h:commandButton>
+            </h:form>
+        </center>
+    </h:body>
+</html>
+
